@@ -1,5 +1,6 @@
 import { Metadata } from 'next'
 import { Navigation } from '@/components/navigation'
+import { Breadcrumb } from '@/components/breadcrumb'
 import { ProductCatalog } from '@/components/product-catalog'
 import { StoneCollection } from '@/components/stone-collection'
 import { Footer } from '@/components/footer'
@@ -34,6 +35,7 @@ export default function StonesPage() {
   return (
     <main className="min-h-screen bg-background">
       <Navigation />
+      <Breadcrumb />
       
       {/* Page Header */}
       <section className="py-12 mt-10 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8 bg-muted/30">

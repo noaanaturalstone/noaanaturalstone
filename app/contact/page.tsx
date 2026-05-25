@@ -1,5 +1,6 @@
 import { Metadata } from 'next'
 import { Navigation } from '@/components/navigation'
+import { Breadcrumb } from '@/components/breadcrumb'
 import { ContactSection } from '@/components/contact-section'
 import { Footer } from '@/components/footer'
 
@@ -33,6 +34,7 @@ export default function ContactPage() {
   return (
     <main className="min-h-screen bg-background">
       <Navigation />
+      <Breadcrumb />
       <ContactSection />
       <Footer />
     </main>
