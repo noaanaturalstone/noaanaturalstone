@@ -1,0 +1,353 @@
+@import 'tailwindcss';
+@import 'tw-animate-css';
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  --background: #faf9f7;
+  --foreground: #1a1612;
+  --card: #ffffff;
+  --card-foreground: #1a1612;
+  --popover: #ffffff;
+  --popover-foreground: #1a1612;
+  --primary: #8b7355;
+  --primary-foreground: #ffffff;
+  --secondary: #d4c5b9;
+  --secondary-foreground: #1a1612;
+  --muted: #e8e0d8;
+  --muted-foreground: #6b6560;
+  --accent: #c4a57b;
+  --accent-foreground: #ffffff;
+  --destructive: #dc2626;
+  --destructive-foreground: #ffffff;
+  --border: #e8e0d8;
+  --input: #ffffff;
+  --ring: #8b7355;
+  --chart-1: #8b7355;
+  --chart-2: #a4947f;
+  --chart-3: #c4a57b;
+  --chart-4: #d4c5b9;
+  --chart-5: #e8e0d8;
+  --radius: 0.375rem;
+  --sidebar: #ffffff;
+  --sidebar-foreground: #1a1612;
+  --sidebar-primary: #8b7355;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #c4a57b;
+  --sidebar-accent-foreground: #ffffff;
+  --sidebar-border: #e8e0d8;
+  --sidebar-ring: #8b7355;
+  --font-sans: 'Inter', system-ui, sans-serif;
+}
+
+.dark {
+  --background: #0f0d0a;
+  --foreground: #f5f1ed;
+  --card: #1a1612;
+  --card-foreground: #f5f1ed;
+  --popover: #1a1612;
+  --popover-foreground: #f5f1ed;
+  --primary: #c4a57b;
+  --primary-foreground: #0f0d0a;
+  --secondary: #3d3531;
+  --secondary-foreground: #f5f1ed;
+  --muted: #2b2520;
+  --muted-foreground: #a8a09a;
+  --accent: #d4c5b9;
+  --accent-foreground: #0f0d0a;
+  --destructive: #ef4444;
+  --destructive-foreground: #0f0d0a;
+  --border: #2b2520;
+  --input: #1a1612;
+  --ring: #c4a57b;
+  --chart-1: #c4a57b;
+  --chart-2: #b89968;
+  --chart-3: #d4c5b9;
+  --chart-4: #3d3531;
+  --chart-5: #2b2520;
+  --sidebar: #0f0d0a;
+  --sidebar-foreground: #f5f1ed;
+  --sidebar-primary: #c4a57b;
+  --sidebar-primary-foreground: #0f0d0a;
+  --sidebar-accent: #d4c5b9;
+  --sidebar-accent-foreground: #0f0d0a;
+  --sidebar-border: #2b2520;
+  --sidebar-ring: #c4a57b;
+}
+
+@theme inline {
+  --font-sans: var(--font-sans);
+  --font-mono: 'Geist Mono', 'Geist Mono Fallback';
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+@layer utilities {
+  /* Scroll Animation Keyframes - SMOOTH */
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(40px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes fadeInDown {
+    from {
+      opacity: 0;
+      transform: translateY(-40px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes fadeInLeft {
+    from {
+      opacity: 0;
+      transform: translateX(-40px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes fadeInRight {
+    from {
+      opacity: 0;
+      transform: translateX(40px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes scaleIn {
+    from {
+      opacity: 0;
+      transform: scale(0.92);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  @keyframes slideInUp {
+    from {
+      opacity: 0;
+      transform: translateY(80px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* Page Transition Animations */
+  @keyframes pageSlideIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes pageSlideOut {
+    from {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    to {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+  }
+
+  @keyframes fadeInSlow {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-20px);
+    }
+  }
+
+  /* Animation Utility Classes - SMOOTH TIMING */
+  .animate-fade-in-up {
+    animation: fadeInUp 1s cubic-bezier(0.34, 1.56, 0.64, 1);
+  }
+
+  .animate-fade-in-down {
+    animation: fadeInDown 1s cubic-bezier(0.34, 1.56, 0.64, 1);
+  }
+
+  .animate-fade-in-left {
+    animation: fadeInLeft 1s cubic-bezier(0.34, 1.56, 0.64, 1);
+  }
+
+  .animate-fade-in-right {
+    animation: fadeInRight 1s cubic-bezier(0.34, 1.56, 0.64, 1);
+  }
+
+  .animate-scale-in {
+    animation: scaleIn 0.8s cubic-bezier(0.34, 1.56, 0.64, 1);
+  }
+
+  .animate-slide-in-up {
+    animation: slideInUp 1.2s cubic-bezier(0.34, 1.56, 0.64, 1);
+  }
+
+  /* Smooth Scroll Reveal Animations - No Blink */
+  .scroll-reveal-fade-up {
+    animation: fadeInUp 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  }
+
+  .scroll-reveal-fade-down {
+    animation: fadeInDown 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  }
+
+  .scroll-reveal-fade-left {
+    animation: fadeInLeft 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  }
+
+  .scroll-reveal-fade-right {
+    animation: fadeInRight 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  }
+
+  .scroll-reveal-scale {
+    animation: scaleIn 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  }
+
+  .scroll-reveal-slide-up {
+    animation: slideInUp 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  }
+
+  /* Page Transition Classes */
+  .animate-page-in {
+    animation: pageSlideIn 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .animate-fade-in-slow {
+    animation: fadeInSlow 1.5s ease-in-out;
+  }
+
+  .animate-float {
+    animation: float 4s cubic-bezier(0.4, 0.0, 0.2, 1) infinite;
+  }
+
+  .animate-glow {
+    animation: glow 3s ease-in-out infinite;
+  }
+
+  .animate-pulse-ring {
+    animation: pulse-ring 2.5s ease-out infinite;
+  }
+
+  /* Stagger Animation Delays */
+  .animate-delay-100 {
+    animation-delay: 0.1s;
+  }
+
+  .animate-delay-200 {
+    animation-delay: 0.2s;
+  }
+
+  .animate-delay-300 {
+    animation-delay: 0.3s;
+  }
+
+  .animate-delay-400 {
+    animation-delay: 0.4s;
+  }
+
+  .animate-delay-500 {
+    animation-delay: 0.5s;
+  }
+
+  .animate-delay-600 {
+    animation-delay: 0.6s;
+  }
+
+  /* Hover Animations */
+  .hover-lift {
+    @apply transition-all duration-300 ease-out hover:shadow-xl hover:-translate-y-2;
+  }
+
+  .hover-scale {
+    @apply transition-transform duration-300 ease-out hover:scale-105;
+  }
+
+  .hover-glow {
+    @apply transition-shadow duration-300 hover:shadow-lg hover:shadow-primary/30;
+  }
+
+  .hover-text-accent {
+    @apply transition-colors duration-300 hover:text-accent;
+  }
+}
+
