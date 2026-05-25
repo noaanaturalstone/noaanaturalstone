@@ -73,14 +73,14 @@ export function ProjectsGallery() {
         </ScrollReveal>
 
         {/* Projects Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
           {CUSTOM_PROJECTS.map((project, index) => (
             <ScrollReveal key={project.id} animation="fade-up" delay={index * 100}>
               <div
                 onClick={() => setSelectedProject(project)}
                 className="group cursor-pointer"
               >
-                <div className="overflow-hidden rounded-lg mb-4 bg-muted relative aspect-square">
+                <div className="overflow-hidden rounded-lg mb-3 bg-muted relative aspect-square">
                   <img
                     src={project.image}
                     alt={project.title}
@@ -88,19 +88,19 @@ export function ProjectsGallery() {
                     className="w-full h-full object-cover group-hover:scale-110 transition duration-500 smooth-transform"
                   />
                   <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
-                    <button className="bg-white text-black px-6 py-2 rounded-lg font-medium hover:bg-white/90 transition">
+                    <button className="bg-white text-black px-4 py-1.5 rounded-lg font-medium text-sm hover:bg-white/90 transition">
                       View Project
                     </button>
                   </div>
                 </div>
                 <div>
-                  <p className="text-xs sm:text-sm text-accent font-bold uppercase tracking-wider mb-2">
+                  <p className="text-xs text-accent font-bold uppercase tracking-wider mb-1.5">
                     {project.category}
                   </p>
-                  <h3 className="text-lg sm:text-xl font-serif font-bold text-foreground mb-2 group-hover:text-accent transition">
+                  <h3 className="text-base sm:text-lg font-serif font-bold text-foreground mb-1.5 group-hover:text-accent transition line-clamp-2">
                     {project.title}
                   </h3>
-                  <p className="text-sm text-muted-foreground leading-relaxed">
+                  <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed line-clamp-2">
                     {project.description}
                   </p>
                 </div>

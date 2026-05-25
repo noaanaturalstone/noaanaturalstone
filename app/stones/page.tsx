@@ -38,12 +38,12 @@ export default function StonesPage() {
       <Breadcrumb />
       
       {/* Page Header */}
-      <section className="py-12 mt-10 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8 bg-muted/30">
+      <section className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8 bg-muted/30">
         <div className="max-w-6xl mx-auto">
           <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-serif font-bold text-foreground mb-3 sm:mb-4">
             All Stones & Products
           </h1>
-          <p className="text-base sm:text-lg text-muted-foreground max-w-3xl">
+          <p className="text-base sm:text-lg text-muted-foreground max-w-6xl">
             Discover our premium Indonesian natural stone collection featuring authentic andesite flame stone, terra stone, and evergreen stone. Perfect for flooring, wall cladding, and luxury design applications.
           </p>
         </div>

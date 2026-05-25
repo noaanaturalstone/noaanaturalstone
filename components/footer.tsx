@@ -58,7 +58,7 @@ export function Footer() {
         {/* Bottom bar */}
         <div className="border-t border-background/20 pt-6 sm:pt-8">
           <p className="text-center text-xs sm:text-sm text-background/80">
-            © 2004-2024 NOA Natural Stone. Premium Indonesian natural stone manufacturer and exporter. All rights reserved.
+            © 2004-2026 NOA Natural Stone. Premium Indonesian natural stone manufacturer and exporter. All rights reserved.
           </p>
         </div>
       </div>
