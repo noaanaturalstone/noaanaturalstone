@@ -71,7 +71,7 @@ export default function RootLayout({
     image: 'https://noanaturalstone.com/og-image.jpg',
     url: 'https://noanaturalstone.com',
     telephone: '+6283197188148',
-    email: 'admin@noanaturalstone.com',
+    email: 'olivia@noanaturalstone.com',
     areaServed: 'Worldwide',
     address: {
       '@type': 'PostalAddress',

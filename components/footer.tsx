@@ -49,7 +49,7 @@ export function Footer() {
               </div>
               <div className="flex items-center gap-2">
                 <Mail className="w-4 h-4 flex-shrink-0" />
-                <a href="mailto:admin@noanaturalstone.com" className="text-background/80 hover:text-background transition">admin@noanaturalstone.com</a>
+                <a href="mailto:olivia@noanaturalstone.com" className="text-background/80 hover:text-background transition">olivia@noanaturalstone.com</a>
               </div>
             </div>
           </div>

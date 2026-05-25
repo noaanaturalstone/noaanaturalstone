@@ -91,10 +91,10 @@ export function ContactSection() {
                 <div>
                   <h3 className="text-lg font-semibold text-foreground mb-2">Email</h3>
                   <a
-                    href="mailto:admin@noanaturalstone.com"
+                    href="mailto:olivia@noanaturalstone.com"
                     className="text-muted-foreground hover:text-primary transition break-all"
                   >
-                    admin@noanaturalstone.com
+                    olivia@noanaturalstone.com
                   </a>
                 </div>
               </div>
