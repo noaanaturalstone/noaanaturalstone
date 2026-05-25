@@ -5,8 +5,8 @@ import './globals.css'
 
 export const metadata: Metadata = {
   title: 'NOA Natural Stone | Premium Indonesian Stone Manufacturer & Exporter',
-  description: 'NOA Natural Stone: Premium natural stone manufacturer from Indonesia. Specializing in black lava stone, andesite, limestone, and custom stone products for global markets. Direct supplier from Malang, East Java.',
-  keywords: ['natural stone manufacturer Indonesia', 'Indonesia natural stone supplier', 'lava stone Indonesia', 'andesite stone supplier', 'limestone manufacturer Indonesia', 'natural stone exporter Indonesia', 'black lava stone supplier', 'wall cladding stone Indonesia', 'custom natural stone production', 'natural stone tiles Indonesia'],
+  description: 'NOA Natural Stone: Premium natural stone manufacturer from Indonesia. Specializing in black lava stone, andesite, limestone, and custom stone products for global markets. Direct supplier from Malang, East Java. Serving Surabaya and nationwide.',
+  keywords: ['natural stone manufacturer Indonesia', 'Indonesia natural stone supplier', 'lava stone Indonesia', 'andesite stone supplier', 'limestone manufacturer Indonesia', 'natural stone exporter Indonesia', 'black lava stone supplier', 'wall cladding stone Indonesia', 'custom natural stone production', 'natural stone tiles Indonesia', 'batu surabaya', 'batu malang', 'supplier batu surabaya', 'natural stone surabaya'],
   generator: 'v0.app',
   metadataBase: new URL('https://noanaturalstone.com'),
   alternates: {

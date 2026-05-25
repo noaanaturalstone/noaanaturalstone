@@ -8,45 +8,59 @@ import { ScrollReveal } from '@/components/scroll-reveal'
 const PRODUCTS = [
   {
     id: 1,
-    name: 'Black Lava 10x10',
+    name: 'Andesite Flamed',
     category: 'flooring',
-    description: 'Premium black lava stone tiles in 10x10 format. Authentic volcanic stone from Indonesia perfect for residential and commercial flooring applications',
-    image: '/images/product/black_lava_10x10.jpeg',
+    description: 'Premium andesite flamed stone with dynamic color variations. Authentic volcanic stone from Indonesia perfect for residential and commercial flooring applications',
+    image: '/images/product/andesit_flame.jpeg',
   },
   {
     id: 2,
-    name: 'Black Lava 10x20',
+    name: 'Andesite Flamed Variant',
     category: 'flooring',
-    description: 'Professional grade black lava stone pavers in 10x20 size. Ideal for large-scale projects, walkways, and contemporary design installations',
-    image: '/images/product/black_lava_10x20.jpeg',
+    description: 'Professional grade andesite flamed stone in alternate pattern. Ideal for large-scale projects, walkways, and contemporary design installations',
+    image: '/images/product/andesit_flame_2.jpeg',
   },
   {
     id: 3,
-    name: 'Evergreen Stone',
+    name: 'Andesite Natural',
     category: 'flooring',
-    description: 'Natural evergreen stone collection from Indonesia. Premium quality stone tiles for interior and exterior applications with unique coloring',
-    image: '/images/product/evergreen_stone.jpeg',
+    description: 'Natural andesite stone collection from Indonesia. Premium quality stone tiles for interior and exterior applications with authentic texture',
+    image: '/images/product/andesit_natural.jpeg',
   },
   {
     id: 4,
-    name: 'Terra Stone',
+    name: 'Evergreen Stone',
     category: 'wall-cladding',
-    description: 'Premium terra stone from Indonesia. Perfect for wall cladding, feature walls and architectural accent applications',
-    image: '/images/product/terra_stone.jpeg',
+    description: 'Natural evergreen stone from Indonesia. Perfect for wall cladding, feature walls and architectural accent applications with unique coloring',
+    image: '/images/product/evergreen_stone.jpeg',
   },
   {
     id: 5,
-    name: 'Textured Black Lava',
+    name: 'Terra Stone Texture',
     category: 'countertops',
-    description: 'Textured black lava stone with natural surface finish. Custom production for luxury countertops, accent walls, and bespoke stone solutions',
-    image: '/images/product/textured_black_lava.jpeg',
+    description: 'Textured terra stone with natural surface finish. Custom production for luxury countertops, accent walls, and bespoke stone solutions',
+    image: '/images/product/tera_stone_texture.jpeg',
   },
   {
     id: 6,
-    name: 'Textured Terra',
+    name: 'Terra Stone',
     category: 'wall-cladding',
-    description: 'Premium textured terra stone for luxury interior design. Indonesian natural stone cladding with distinctive surface texture for modern homes',
-    image: '/images/product/textured_terra.jpeg',
+    description: 'Premium terra stone for luxury interior design. Indonesian natural stone cladding with authentic finish for modern and traditional homes',
+    image: '/images/product/terra_stone.jpeg',
+  },
+  {
+    id: 7,
+    name: 'Pumice Stone',
+    category: 'flooring',
+    description: 'Natural pumice stone from Indonesia. Lightweight volcanic stone tiles perfect for modern flooring and outdoor applications with unique texture',
+    image: '/images/product/pumice_stonee_2.jpeg',
+  },
+  {
+    id: 8,
+    name: 'Red Marble',
+    category: 'countertops',
+    description: 'Premium red marble stone for luxury interior design. Indonesian natural marble perfect for countertops, feature walls, and high-end architectural applications',
+    image: '/images/product/red_marble.jpg',
   },
 ]
 
@@ -67,7 +81,7 @@ export function ProductCatalog() {
             Premium Indonesian Natural Stone Products
           </h2>
           <p className="text-sm sm:text-base md:text-lg text-muted-foreground max-w-2xl mx-auto px-2">
-            Explore our collection of black lava stone, andesite, limestone, and custom stone products from Indonesia. Premium quality natural stone tiles, wall cladding, and custom solutions for worldwide export.
+            Explore our collection of authentic Indonesian andesite flamed stone, natural andesite, terra stone, and evergreen stone. Premium quality natural stone tiles, wall cladding, and custom solutions for worldwide export.
           </p>
         </ScrollReveal>
 

@@ -4,8 +4,9 @@ import { StoneCollection } from '@/components/stone-collection'
 import { Footer } from '@/components/footer'
 
 export const metadata = {
-  title: 'All Stones & Products | NOA Natural Stone',
-  description: 'Browse our complete collection of premium Indonesian natural stones including black lava, andesite, limestone, and custom stone products.',
+  title: 'Andesite & Terra Stone Collection | NOA Natural Stone',
+  description: 'Browse our premium Indonesian andesite flame stone, natural andesite, terra stone, and evergreen stone products. Premium quality natural stone for flooring, wall cladding, and countertops. Available from Malang, serving Surabaya and Indonesia.',
+  keywords: ['andesite stone surabaya', 'terra stone supplier', 'natural stone malang', 'batu alam surabaya', 'stone cladding malang', 'flooring stone indonesia'],
 }
 
 export default function StonesPage() {
@@ -14,13 +15,13 @@ export default function StonesPage() {
       <Navigation />
       
       {/* Page Header */}
-      <section className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8 bg-muted/30">
+      <section className="py-12 mt-10 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8 bg-muted/30">
         <div className="max-w-6xl mx-auto">
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-serif font-bold text-foreground mb-3 sm:mb-4">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-serif font-bold text-foreground mb-3 sm:mb-4">
             All Stones & Products
           </h1>
           <p className="text-base sm:text-lg text-muted-foreground max-w-3xl">
-            Discover our complete range of premium Indonesian natural stone products. From classic black lava to versatile andesite, find the perfect stone for your project.
+            Discover our premium Indonesian natural stone collection featuring authentic andesite flame stone, terra stone, and evergreen stone. Perfect for flooring, wall cladding, and luxury design applications.
           </p>
         </div>
       </section>

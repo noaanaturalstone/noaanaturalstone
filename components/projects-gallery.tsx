@@ -47,7 +47,7 @@ export function ProjectsGallery() {
       <article className="max-w-6xl mx-auto">
         {/* Header */}
         <ScrollReveal animation="fade-up" className="text-center mb-12 sm:mb-16">
-          <h1 className="text-4xl sm:text-5xl md:text-6xl font-serif font-bold text-foreground mb-4 sm:mb-6">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-serif font-bold text-foreground mb-4 sm:mb-6">
             Our Custom Projects
           </h1>
           <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto px-2 mb-6">
