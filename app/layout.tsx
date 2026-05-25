@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     siteName: 'NOA Natural Stone',
     images: [
       {
-        url: '/og-image.jpg',
+        url: '/images/OG_Noa.png',
         width: 1200,
         height: 630,
         alt: 'NOA Natural Stone - Premium Indonesian Natural Stone Products',
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'NOA Natural Stone | Premium Indonesian Stone Exporter',
     description: 'Premium natural stone products from Indonesia. Black lava stone, andesite, limestone, and custom solutions.',
-    images: ['/og-image.jpg'],
+    images: ['/images/OG_Noa.png'],
   },
   robots: {
     index: true,
@@ -68,7 +68,7 @@ export default function RootLayout({
     '@type': 'LocalBusiness',
     name: 'NOA Natural Stone',
     description: 'Premium natural stone manufacturer and exporter from Indonesia specializing in black lava stone, andesite, limestone, and custom stone products',
-    image: 'https://noanaturalstone.com/og-image.jpg',
+    image: 'https://noanaturalstone.com/images/OG_Noa.png',
     url: 'https://noanaturalstone.com',
     telephone: '+6283197188148',
     email: 'olivia@noanaturalstone.com',

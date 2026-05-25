@@ -1,12 +1,33 @@
+import { Metadata } from 'next'
 import { Navigation } from '@/components/navigation'
 import { ProductCatalog } from '@/components/product-catalog'
 import { StoneCollection } from '@/components/stone-collection'
 import { Footer } from '@/components/footer'
 
-export const metadata = {
+export const metadata: Metadata = {
   title: 'Andesite & Terra Stone Collection | NOA Natural Stone',
   description: 'Browse our premium Indonesian andesite flame stone, natural andesite, terra stone, and evergreen stone products. Premium quality natural stone for flooring, wall cladding, and countertops. Available from Malang, serving Surabaya and Indonesia.',
   keywords: ['andesite stone surabaya', 'terra stone supplier', 'natural stone malang', 'batu alam surabaya', 'stone cladding malang', 'flooring stone indonesia'],
+  openGraph: {
+    title: 'Premium Stone Collection | NOA Natural Stone',
+    description: 'Browse our premium Indonesian andesite, terra stone, and evergreen stone products for flooring, wall cladding, and countertops.',
+    url: 'https://noanaturalstone.com/stones',
+    type: 'website',
+    images: [
+      {
+        url: '/images/OG_Noa.png',
+        width: 1200,
+        height: 630,
+        alt: 'Premium Stone Collection - NOA Natural Stone',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Premium Stone Collection | NOA Natural Stone',
+    description: 'Browse our premium Indonesian andesite, terra stone, and evergreen stone products.',
+    images: ['/images/OG_Noa.png'],
+  },
 }
 
 export default function StonesPage() {
