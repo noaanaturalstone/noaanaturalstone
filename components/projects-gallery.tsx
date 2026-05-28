@@ -37,6 +37,14 @@ const CUSTOM_PROJECTS = [
     image: '/images/ourwork/ourwork_bathtub_1.jpeg',
     details: 'Custom carved from premium Indonesian stone. Waterproofed finish. Tailored to client specifications and space requirements.',
   },
+  {
+    id: 5,
+    title: 'Premium Stone Pool Floor',
+    category: 'Outdoor Features',
+    description: 'Elegant custom stone pool floor installation. Showcasing our expertise in creating sophisticated outdoor water features with premium Indonesian natural stone, offering both luxury and durability.',
+    image: '/images/ourwork/ourwork_stone_pool_floor.jpeg',
+    details: 'Premium Indonesian stone with slip-resistant finish. Custom cut and polished. Water-resistant coating applied. Durable and elegant for luxury pool installations.',
+  },
 ]
 
 export function ProjectsGallery() {
@@ -130,40 +138,48 @@ export function ProjectsGallery() {
 
       {/* Project Detail Modal */}
       {selectedProject && (
-        <div className="fixed inset-0 z-50 bg-black/80 flex items-center justify-center p-4">
-          <div className="relative max-w-2xl w-full">
+        <div className="fixed inset-0 z-50 bg-black/80 flex items-center justify-center p-2 sm:p-3 md:p-4">
+          <div className="relative w-full max-w-4xl">
             <div className="bg-background rounded-lg overflow-hidden shadow-2xl">
-              <div className="relative">
-                <img
-                  src={selectedProject.image}
-                  alt={selectedProject.title}
-                  className="w-full h-auto max-h-96 sm:max-h-96 md:max-h-[500px] object-cover"
-                />
-                <button
-                  onClick={() => setSelectedProject(null)}
-                  className="absolute top-3 right-3 sm:top-4 sm:right-4 bg-black/60 hover:bg-black/80 text-white rounded-full p-2 transition z-10"
-                  aria-label="Close modal"
-                >
-                  <X size={24} />
-                </button>
-              </div>
-              <div className="p-4 sm:p-6 bg-card border-t border-border">
-                <p className="text-xs sm:text-sm text-accent font-bold uppercase tracking-wider mb-2">
-                  {selectedProject.category}
-                </p>
-                <h3 className="text-lg sm:text-2xl font-serif font-bold text-foreground mb-3 sm:mb-4">
-                  {selectedProject.title}
-                </h3>
-                <p className="text-sm sm:text-base text-muted-foreground mb-4">
-                  {selectedProject.description}
-                </p>
-                <div className="bg-muted/50 rounded-lg p-4 border border-border">
-                  <p className="text-xs font-bold text-foreground uppercase tracking-wider mb-2">
-                    Project Details
+              {/* Close Button */}
+              <button
+                onClick={() => setSelectedProject(null)}
+                className="absolute top-2 right-2 sm:top-3 sm:right-3 bg-black/70 hover:bg-black/90 text-white rounded-full p-2 sm:p-2.5 transition z-20"
+                aria-label="Close modal"
+              >
+                <X size={20} className="sm:w-6 sm:h-6" />
+              </button>
+
+              {/* Grid Layout: Image Left, Content Right */}
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-0">
+                {/* Image Container */}
+                <div className="flex items-center justify-center bg-muted p-2 sm:p-3 md:p-4">
+                  <img
+                    src={selectedProject.image}
+                    alt={selectedProject.title}
+                    className="w-full h-auto object-contain max-h-80 sm:max-h-96"
+                  />
+                </div>
+
+                {/* Content Container */}
+                <div className="p-3 sm:p-4 md:p-6 bg-card flex flex-col justify-start border-l border-border">
+                  <p className="text-xs sm:text-sm text-accent font-bold uppercase tracking-wider mb-1.5">
+                    {selectedProject.category}
                   </p>
-                  <p className="text-sm text-muted-foreground">
-                    {selectedProject.details}
+                  <h3 className="text-lg sm:text-xl md:text-2xl font-serif font-bold text-foreground mb-2 sm:mb-3 line-clamp-3">
+                    {selectedProject.title}
+                  </h3>
+                  <p className="text-xs sm:text-sm md:text-base text-muted-foreground mb-3 sm:mb-4 leading-snug line-clamp-3">
+                    {selectedProject.description}
                   </p>
+                  <div className="bg-muted/50 rounded-lg p-2.5 sm:p-3 md:p-4 border border-border">
+                    <p className="text-xs font-bold text-foreground uppercase tracking-wider mb-1.5">
+                      Project Details
+                    </p>
+                    <p className="text-xs sm:text-sm md:text-base text-muted-foreground leading-snug line-clamp-4">
+                      {selectedProject.details}
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
