@@ -52,7 +52,7 @@ export function ContactSection() {
                     href="tel:+6283197188148"
                     className="text-muted-foreground hover:text-primary transition"
                   >
-                    +62 831-9718-8148
+                    +62 878-6671-4970
                   </a>
                 </div>
               </div>
@@ -69,12 +69,12 @@ export function ContactSection() {
                 <div>
                   <h3 className="text-lg font-semibold text-foreground mb-2">WhatsApp</h3>
                   <a
-                    href="https://wa.me/6283197188148"
+                    href="https://wa.me/6287866714970"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-muted-foreground hover:text-primary transition"
                   >
-                    +62 831-9718-8148
+                    +62 878-6671-4970
                   </a>
                 </div>
               </div>

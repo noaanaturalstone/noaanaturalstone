@@ -9,27 +9,27 @@ import { ScrollReveal } from '@/components/scroll-reveal'
 const STONE_COLLECTION = [
   {
     id: 1,
-    title: 'Premium Stone Collection 1',
-    image: '/images/stone_collection_1.jpeg',
+    title: 'Any variation of Pebbles Stone',
+    image: '/images/pabbles_stone.jpeg',
     description: 'Part of our premium natural stone collection',
   },
   {
     id: 2,
-    title: 'Premium Stone Collection 2',
-    image: '/images/stone_collection_2.jpeg',
-    description: 'Premium quality Indonesian stone',
+    title: 'Terrazo',
+    image: '/images/terrazo.jpeg',
+    description: 'Terrazo - Premium quality Indonesian stone',
   },
   {
     id: 3,
-    title: 'Premium Stone Collection 3',
-    image: '/images/stone_collection_3.jpeg',
+    title: 'Wall cading mixed stone',
+    image: '/images/wall_cading_mix_stone.jpeg',
     description: 'Featured stone collection piece',
   },
   {
     id: 4,
-    title: 'Premium Stone Collection 4',
-    image: '/images/stone_collection_4.jpeg',
-    description: 'Exclusive natural stone variant',
+    title: 'Mosaic by request',
+    image: '/images/mosaic_stone_request.jpeg',
+    description: 'Exclusive natural stone requested by our customers',
   },
 ]
 

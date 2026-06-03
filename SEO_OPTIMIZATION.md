@@ -282,7 +282,7 @@ After deployment, verify:
 
 **NOA Natural Stone**
 - Email: olivia@noanaturalstone.com
-- Phone: +62 831-9718-8148
+- Phone: +62 878-6671-4970
 - Location: Malang, East Java, Indonesia
 - Founded: 2004
 - Service Area: Worldwide Export
