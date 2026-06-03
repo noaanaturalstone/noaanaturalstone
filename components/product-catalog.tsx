@@ -51,7 +51,7 @@ const PRODUCTS = [
   {
     id: 7,
     name: 'Pumice Stone',
-    category: 'flooring',
+    category: 'production-stone',
     description: 'Natural pumice stone from Indonesia. Lightweight volcanic stone tiles perfect for modern flooring and outdoor applications with unique texture',
     image: '/images/product/pumice_stonee_2.jpeg',
   },
@@ -64,7 +64,7 @@ const PRODUCTS = [
   },
 ]
 
-const CATEGORIES = ['all', 'countertops', 'flooring', 'wall-cladding']
+const CATEGORIES = ['all', 'countertops', 'flooring', 'wall-cladding', 'production-stone']
 
 export function ProductCatalog() {
   const [selectedCategory, setSelectedCategory] = useState('all')
