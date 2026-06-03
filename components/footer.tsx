@@ -31,7 +31,7 @@ export function Footer() {
               <li><a href="/about" className="text-background/80 hover:text-background transition">About Us</a></li>
               <li><a href="/stones" className="text-background/80 hover:text-background transition">Our Products</a></li>
               <li><a href="/contact" className="text-background/80 hover:text-background transition">Contact</a></li>
-              <li><a href="/" className="text-background/80 hover:text-background transition">Sitemap</a></li>
+              {/* <li><a href="/" className="text-background/80 hover:text-background transition">Sitemap</a></li> */}
             </ul>
           </div>
 
