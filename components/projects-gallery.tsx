@@ -1,10 +1,26 @@
 'use client'
 
-import { useState } from 'react'
+import { useEffect, useMemo, useRef, useState } from 'react'
 import { X } from 'lucide-react'
 import { ScrollReveal } from '@/components/scroll-reveal'
 
-const CUSTOM_PROJECTS = [
+type Project = {
+  id: number
+  title: string
+  category: string
+  description: string
+  image: string
+  details: string
+  video?: string
+}
+
+type ProjectMedia = {
+  type: 'image' | 'video'
+  src: string
+  alt?: string
+}
+
+const CUSTOM_PROJECTS: Project[] = [
   {
     id: 1,
     title: 'Custom Stone Decorative Lobby Chair',
@@ -45,10 +61,83 @@ const CUSTOM_PROJECTS = [
     image: '/images/ourwork/ourwork_stone_pool_floor.jpeg',
     details: 'Premium Indonesian stone with slip-resistant finish. Custom cut and polished. Water-resistant coating applied. Durable and elegant for luxury pool installations.',
   },
+  {
+    id: 6,
+    title: 'Marmer',
+    category: 'Interior',
+    description: 'Custom marmer project with premium natural stone finish for elegant interior applications.',
+    image: '/images/ourwork/ourwork_marmer.jpeg',
+    video: '/images/ourwork/ourwork_marmer_video.mp4',
+    details: 'Includes project photo and video preview. Swipe in the modal to switch from photo to video.',
+  },
 ]
 
 export function ProjectsGallery() {
-  const [selectedProject, setSelectedProject] = useState<typeof CUSTOM_PROJECTS[0] | null>(null)
+  const [selectedProject, setSelectedProject] = useState<Project | null>(null)
+  const [currentMediaIndex, setCurrentMediaIndex] = useState(0)
+  const mediaScrollRef = useRef<HTMLDivElement | null>(null)
+
+  const selectedProjectMedia = useMemo<ProjectMedia[]>(() => {
+    if (!selectedProject) {
+      return []
+    }
+
+    const media: ProjectMedia[] = [
+      {
+        type: 'image',
+        src: selectedProject.image,
+        alt: selectedProject.title,
+      },
+    ]
+
+    if (selectedProject.video) {
+      media.push({
+        type: 'video',
+        src: selectedProject.video,
+      })
+    }
+
+    return media
+  }, [selectedProject])
+
+  useEffect(() => {
+    setCurrentMediaIndex(0)
+    if (mediaScrollRef.current) {
+      mediaScrollRef.current.scrollTo({ left: 0, behavior: 'auto' })
+    }
+  }, [selectedProject])
+
+  const goToMedia = (index: number) => {
+    if (!mediaScrollRef.current || selectedProjectMedia.length === 0) {
+      return
+    }
+
+    const safeIndex = Math.max(0, Math.min(index, selectedProjectMedia.length - 1))
+    const containerWidth = mediaScrollRef.current.clientWidth
+
+    mediaScrollRef.current.scrollTo({
+      left: containerWidth * safeIndex,
+      behavior: 'smooth',
+    })
+
+    setCurrentMediaIndex(safeIndex)
+  }
+
+  const handleMediaScroll = () => {
+    if (!mediaScrollRef.current) {
+      return
+    }
+
+    const containerWidth = mediaScrollRef.current.clientWidth
+    if (containerWidth === 0) {
+      return
+    }
+
+    const index = Math.round(mediaScrollRef.current.scrollLeft / containerWidth)
+    if (index !== currentMediaIndex) {
+      setCurrentMediaIndex(index)
+    }
+  }
 
   return (
     <section className="pt-20 sm:pt-24 md:pt-28 pb-12 sm:pb-20 px-4 sm:px-6 lg:px-8 bg-background">
@@ -85,7 +174,10 @@ export function ProjectsGallery() {
           {CUSTOM_PROJECTS.map((project, index) => (
             <ScrollReveal key={project.id} animation="fade-up" delay={index * 100}>
               <div
-                onClick={() => setSelectedProject(project)}
+                onClick={() => {
+                  setSelectedProject(project)
+                  setCurrentMediaIndex(0)
+                }}
                 className="group cursor-pointer"
               >
                 <div className="overflow-hidden rounded-lg mb-3 bg-muted relative aspect-square">
@@ -153,12 +245,64 @@ export function ProjectsGallery() {
               {/* Grid Layout: Image Left, Content Right */}
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-0">
                 {/* Image Container */}
-                <div className="flex items-center justify-center bg-muted p-2 sm:p-3 md:p-4">
-                  <img
-                    src={selectedProject.image}
-                    alt={selectedProject.title}
-                    className="w-full h-auto object-contain max-h-80 sm:max-h-96"
-                  />
+                <div className="bg-muted p-2 sm:p-3 md:p-4">
+                  <div
+                    ref={mediaScrollRef}
+                    onScroll={handleMediaScroll}
+                    className="flex overflow-hidden scroll-smooth rounded-md"
+                  >
+                    {selectedProjectMedia.map((media) => (
+                      <div key={`${media.type}-${media.src}`} className="w-full shrink-0 snap-center">
+                        {media.type === 'image' ? (
+                          <img
+                            src={media.src}
+                            alt={media.alt || selectedProject.title}
+                            className="w-full h-auto object-contain max-h-80 sm:max-h-96"
+                          />
+                        ) : (
+                          <video
+                            src={media.src}
+                            controls
+                            preload="metadata"
+                            className="w-full h-auto object-contain max-h-80 sm:max-h-96 bg-black"
+                          >
+                            Your browser does not support the video tag.
+                          </video>
+                        )}
+                      </div>
+                    ))}
+                  </div>
+
+                  {selectedProjectMedia.length > 1 && (
+                    <div className="mt-3 flex items-center justify-center gap-2">
+                      <button
+                        onClick={() => goToMedia(currentMediaIndex - 1)}
+                        disabled={currentMediaIndex === 0}
+                        className="px-3 py-1.5 text-xs sm:text-sm rounded-md border border-border bg-background disabled:opacity-50 disabled:cursor-not-allowed"
+                      >
+                        Prev
+                      </button>
+
+                      {selectedProjectMedia.map((media, mediaIndex) => (
+                        <button
+                          key={`dot-${media.type}-${mediaIndex}`}
+                          onClick={() => goToMedia(mediaIndex)}
+                          className={`h-2.5 w-2.5 rounded-full transition ${
+                            currentMediaIndex === mediaIndex ? 'bg-primary' : 'bg-border'
+                          }`}
+                          aria-label={`Open ${media.type} ${mediaIndex + 1}`}
+                        />
+                      ))}
+
+                      <button
+                        onClick={() => goToMedia(currentMediaIndex + 1)}
+                        disabled={currentMediaIndex === selectedProjectMedia.length - 1}
+                        className="px-3 py-1.5 text-xs sm:text-sm rounded-md border border-border bg-background disabled:opacity-50 disabled:cursor-not-allowed"
+                      >
+                        Next
+                      </button>
+                    </div>
+                  )}
                 </div>
 
                 {/* Content Container */}
