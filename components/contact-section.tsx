@@ -20,12 +20,12 @@ export function ContactSection() {
         </ScrollReveal>
 
         {/* Contact Info Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 md:gap-6 mb-12 sm:mb-16 md:mb-20">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-12 sm:mb-16 md:mb-20">
           {/* Location */}
           <ScrollReveal delay={0}>
             <div className="bg-background rounded-lg border border-border p-8 hover:border-primary/50 transition">
               <div className="flex items-start gap-4">
-                <div className="p-3 bg-primary/10 rounded-lg flex-shrink-0">
+                <div className="p-3 bg-primary/10 rounded-lg shrink-0">
                   <MapPin className="w-6 h-6 text-primary" />
                 </div>
                 <div>
@@ -43,14 +43,14 @@ export function ContactSection() {
           <ScrollReveal delay={100}>
             <div className="bg-background rounded-lg border border-border p-8 hover:border-primary/50 transition">
               <div className="flex items-start gap-4">
-                <div className="p-3 bg-primary/10 rounded-lg flex-shrink-0">
+                <div className="p-3 bg-primary/10 rounded-lg shrink-0">
                   <Phone className="w-6 h-6 text-primary" />
                 </div>
                 <div>
                   <h3 className="text-lg font-semibold text-foreground mb-2">Phone</h3>
                   <a
                     href="tel:+6283197188148"
-                    className="text-muted-foreground hover:text-primary transition"
+                    className="text-m text-muted-foreground hover:text-primary transition whitespace-nowrap"
                   >
                     +62 878-6671-4970
                   </a>
@@ -63,7 +63,7 @@ export function ContactSection() {
           <ScrollReveal delay={150}>
             <div className="bg-background rounded-lg border border-border p-8 hover:border-primary/50 transition">
               <div className="flex items-start gap-4">
-                <div className="p-3 bg-primary/10 rounded-lg flex-shrink-0">
+                <div className="p-3 bg-primary/10 rounded-lg shrink-0">
                   <MessageCircle className="w-6 h-6 text-primary" />
                 </div>
                 <div>
@@ -72,7 +72,7 @@ export function ContactSection() {
                     href="https://wa.me/6287866714970"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-muted-foreground hover:text-primary transition"
+                    className="text-m text-muted-foreground hover:text-primary transition whitespace-nowrap"
                   >
                     +62 878-6671-4970
                   </a>
@@ -85,16 +85,15 @@ export function ContactSection() {
           <ScrollReveal delay={250}>
             <div className="bg-background rounded-lg border border-border p-8 hover:border-primary/50 transition">
               <div className="flex items-start gap-4">
-                <div className="p-3 bg-primary/10 rounded-lg flex-shrink-0">
+                <div className="p-3 bg-primary/10 rounded-lg shrink-0">
                   <Mail className="w-6 h-6 text-primary" />
                 </div>
                 <div>
                   <h3 className="text-lg font-semibold text-foreground mb-2">Email</h3>
                   <a
-                    href="mailto:olivia@noanaturalstone.com"
-                    className="text-muted-foreground hover:text-primary transition break-all"
-                  >
-                    olivia@noanaturalstone.com
+                    href="mailto:noaanaturalstone@gmail.com"
+                    className="text-m text-muted-foreground hover:text-primary transition md:whitespace-nowrap break-all md:break-normal">
+                    noaanaturalstone@gmail.com
                   </a>
                 </div>
               </div>

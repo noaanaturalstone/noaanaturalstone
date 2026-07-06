@@ -36,7 +36,6 @@ export default function AboutPage() {
       <Navigation />
       <Breadcrumb />
       <AboutSection />
-
       <Footer />
     </main>
   )

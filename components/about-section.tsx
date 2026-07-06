@@ -30,7 +30,7 @@ export function AboutSection() {
                 'Competitive pricing for bulk orders',
               ].map((feature, index) => (
                 <div key={feature} className="flex items-start gap-2 sm:gap-3 smooth-transition">
-                  <CheckCircle className="w-5 sm:w-6 h-5 sm:h-6 text-accent flex-shrink-0 mt-0.5" />
+                  <CheckCircle className="w-5 sm:w-6 h-5 sm:h-6 text-accent shrink-0 mt-0.5" />
                   <span className="text-sm sm:text-base text-foreground font-medium">{feature}</span>
                 </div>
               ))}
@@ -47,13 +47,13 @@ export function AboutSection() {
                 className="w-full aspect-square object-cover rounded-lg hover-scale smooth-transform"
               />
               <img
-                src="/images/stone_collection_2.jpeg"
+                src="/images/mosaic_stone_request.jpeg"
                 alt="Showcasing our diverse range of natural stone products for flooring and cladding"
                 loading="lazy"
                 className="w-full aspect-square object-cover rounded-lg hover-scale smooth-transform"
               />
               <img
-                src="/images/stone_collection_1.jpeg"
+                src="/images/terrazo.jpeg"
                 alt="Our stone collection showcase"
                 loading="lazy"
                 className="w-full aspect-square object-cover rounded-lg hover-scale smooth-transform"
@@ -71,7 +71,7 @@ export function AboutSection() {
         {/* International Experience Section */}
         <div className="mt-16 sm:mt-20 md:mt-24 pt-16 sm:pt-20 md:pt-24 border-t border-border/50">
           <ScrollReveal animation="fade-up" className="space-y-6 sm:space-y-8">
-            <h3 className="text-2xl sm:text-3xl md:text-4xl font-serif font-bold text-foreground">
+            <h3 className="text-lg sm:text-2xl md:text-3xl font-serif font-bold text-foreground">
               Our International Experience
             </h3>
             <p className="text-sm sm:text-base md:text-lg text-muted-foreground leading-relaxed">

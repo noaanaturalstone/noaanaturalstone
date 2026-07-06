@@ -4,58 +4,118 @@ import { Globe, Truck, CheckCircle } from 'lucide-react'
 import { ScrollReveal } from '@/components/scroll-reveal'
 
 export function ShippingSection() {
+  const internationalMarkets = [
+    {
+      country: 'China',
+      description:
+        'Supplying premium andesite, lava stone, pumice stone, and custom natural stone solutions to architects, developers, contractors, distributors, and commercial projects across major cities in China.',
+    },
+    {
+      country: 'Singapore',
+      description:
+        'Trusted supplier for residential, hospitality, and commercial developments with premium Indonesian natural stone products, custom fabrication, and export-ready solutions.',
+    },
+    {
+      country: 'Malaysia',
+      description:
+        'Supporting landscaping, architectural, and interior design projects with consistent product quality, stable supply, and reliable international delivery.',
+    },
+  ]
+
   const shippingFeatures = [
     {
       icon: Globe,
       title: 'Worldwide Delivery',
-      description: 'We ship premium Indonesian natural stone to every country globally',
+      description:
+        'Exporting premium Indonesian natural stone products to clients worldwide with professional logistics partners.',
     },
     {
       icon: Truck,
       title: 'Reliable Shipping',
-      description: 'Professional handling and secure packaging ensures your stone arrives in perfect condition',
+      description:
+        'Secure packaging, careful handling, and export-standard logistics ensure every shipment arrives safely.',
     },
     {
       icon: CheckCircle,
       title: 'Tracked Orders',
-      description: 'Full transparency with shipping tracking and real-time updates on your orders',
+      description:
+        'Complete shipment tracking and transparent updates from production until arrival.',
     },
   ]
 
   return (
-    <section className="py-12 sm:py-20 px-4 sm:px-6 lg:px-8 bg-background">
-      <div className="max-w-6xl mx-auto">
-        {/* Section Header */}
+    <section className="bg-background py-12 sm:py-20 px-4 sm:px-6 lg:px-8">
+      <div className="mx-auto max-w-6xl">
+
+        {/* Header */}
         <ScrollReveal animation="fade-up" className="text-center mb-12 sm:mb-16">
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif font-bold text-foreground mb-3 sm:mb-4">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif font-bold text-foreground mb-4">
             Worldwide Shipping & Global Reach
           </h2>
-          <p className="text-sm sm:text-base md:text-lg text-muted-foreground max-w-2xl mx-auto px-2">
-            NOA Natural Stone delivers premium Indonesian stone products to clients across the globe. 
-            Experience reliable international shipping with professional handling and complete tracking.
+
+          <p className="mx-auto max-w-3xl text-sm sm:text-base md:text-lg text-muted-foreground leading-relaxed">
+            Trusted Indonesian natural stone exporter with worldwide shipping, secure packaging, and reliable international delivery.
           </p>
         </ScrollReveal>
 
+        {/* International Experience */}
+        <ScrollReveal animation="fade-up" className="mb-8 sm:mb-8">
+          <div className="text-center mb-10">
+            <h3 className="text-2xl sm:text-3xl font-serif font-bold text-foreground mb-4">
+              Our International Experience
+            </h3>
+
+            <p className="mx-auto max-w-4xl text-muted-foreground leading-8">
+              For over 20 years, NOA Natural Stone has supplied premium Indonesian natural stone to projects in China, Singapore, and Malaysia with consistent quality and dependable export services.
+            </p>
+          </div>
+
+          <div className="grid gap-6 md:grid-cols-3">
+            {internationalMarkets.map((market, index) => (
+              <ScrollReveal
+                key={market.country}
+                animation="fade-up"
+                delay={index * 100}
+              >
+                <div className="rounded-xl border bg-card p-7 h-full transition-all hover:-translate-y-1 hover:shadow-lg">
+                  <h4 className="text-2xl font-semibold mb-4">
+                    {market.country}
+                  </h4>
+
+                  <p className="text-muted-foreground leading-8">
+                    {market.description}
+                  </p>
+                </div>
+              </ScrollReveal>
+            ))}
+          </div>
+        </ScrollReveal>
+
         {/* Shipping Features */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 md:gap-8 mb-12 sm:mb-16">
+        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 mb-14 sm:mb-16">
           {shippingFeatures.map((feature, index) => {
             const Icon = feature.icon
+
             return (
-              <ScrollReveal key={feature.title} animation="fade-up" delay={index * 100}>
-                <div
-                  className="bg-card border border-border rounded-lg p-6 sm:p-8 text-center hover:shadow-lg transition hover-lift smooth-transition"
-                >
-                  <div className="flex justify-center mb-4">
-                    <div className="bg-primary/10 p-3 sm:p-4 rounded-full">
-                      <Icon className="w-6 sm:w-8 h-6 sm:h-8 text-primary" />
+              <ScrollReveal
+                key={feature.title}
+                animation="fade-up"
+                delay={index * 100}
+              >
+                <div className="rounded-xl border bg-card p-8 text-center transition-all hover:-translate-y-1 hover:shadow-lg h-full">
+                  <div className="flex justify-center mb-5">
+                    <div className="rounded-full bg-primary/10 p-4">
+                      <Icon className="h-8 w-8 text-primary" />
                     </div>
-                </div>
-                <h3 className="text-lg sm:text-xl font-serif font-bold text-foreground mb-2 sm:mb-3">
-                  {feature.title}
-                </h3>
-                <p className="text-xs sm:text-sm md:text-base text-muted-foreground">
-                  {feature.description}
-                </p>
+                  </div>
+
+                  <h3 className="text-2xl font-serif font-bold mb-4">
+                    {feature.title}
+                  </h3>
+
+                  <p className="text-muted-foreground leading-7">
+                    {feature.description}
+                  </p>
                 </div>
               </ScrollReveal>
             )
@@ -63,41 +123,56 @@ export function ShippingSection() {
         </div>
 
         {/* Shipping Gallery */}
-        <div className="bg-card border border-border rounded-lg overflow-hidden">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 p-4 sm:p-8">
-            <div className="hover-scale">
+        <div className="overflow-hidden rounded-xl border bg-card">
+
+          <div className="grid gap-6 p-6 md:grid-cols-2 md:p-8">
+
+            <div>
               <img
                 src="/images/shipping/shipping_2.jpeg"
-                alt="Professional stone packaging and shipping process"
+                alt="Professional export packaging for Indonesian natural stone products"
                 loading="lazy"
-                className="w-full aspect-video object-cover rounded-lg transition duration-500"
+                className="aspect-video w-full rounded-lg object-cover"
               />
-              <p className="text-xs sm:text-sm text-muted-foreground mt-2 sm:mt-3 text-center">
-                Professional packaging & handling
+
+              <p className="mt-3 text-center text-sm text-muted-foreground">
+                Professional export packaging
               </p>
             </div>
-            <div className="hover-scale">
+
+            <div>
               <img
                 src="/images/shipping/shipping_3.jpeg"
-                alt="Global stone delivery network worldwide"
+                alt="International natural stone shipping and export logistics"
                 loading="lazy"
-                className="w-full aspect-video object-cover rounded-lg transition duration-500"
+                className="aspect-video w-full rounded-lg object-cover"
               />
-              <p className="text-xs sm:text-sm text-muted-foreground mt-2 sm:mt-3 text-center">
-                International delivery network
+
+              <p className="mt-3 text-center text-sm text-muted-foreground">
+                Worldwide export logistics
               </p>
             </div>
+
           </div>
-          
-          <div className="bg-primary/5 border-t border-border px-4 sm:px-8 py-4 sm:py-6">
-            <h3 className="font-bold text-foreground mb-2 sm:mb-3 text-base sm:text-lg">Shipping to Your Doorstep</h3>
-            <p className="text-muted-foreground text-xs sm:text-sm leading-relaxed">
-              Whether you're in Southeast Asia, Europe, America, or anywhere else in the world, 
-              NOA Natural Stone can deliver your premium stone products with professional logistics partners. 
-              Contact us for shipping quotes, delivery timelines, and custom packaging options for your project.
+
+          <div className="border-t bg-primary/5 px-6 py-6 md:px-8">
+            <h3 className="text-xl font-bold mb-3">
+              Shipping to Your Doorstep
+            </h3>
+
+            <p className="leading-8 text-muted-foreground">
+              Whether your project is located in Asia, Europe, Australia, the
+              Middle East, North America, or anywhere around the world, NOA
+              Natural Stone provides dependable international shipping with
+              professional logistics partners, secure export packaging, and
+              complete shipment tracking. Contact us for shipping quotations,
+              delivery schedules, container loading details, and custom export
+              solutions.
             </p>
           </div>
+
         </div>
+
       </div>
     </section>
   )

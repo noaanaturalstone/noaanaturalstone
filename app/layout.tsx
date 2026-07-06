@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { Analytics } from '@vercel/analytics/next'
+import { Navigation } from '@/components/navigation'
 import { PageTransition } from '@/components/page-transition'
 import { FAQSchema } from '@/components/faq-schema'
 import './globals.css'
@@ -84,7 +85,7 @@ export default function RootLayout({
     ],
     url: 'https://noanaturalstone.com',
     telephone: '+6283197188148',
-    email: 'olivia@noanaturalstone.com',
+    email: 'noaanaturalstone@gmail.com',
     areaServed: ['ID', 'SG', 'MY', 'TH', 'VN', 'PH', 'JP', 'KR', 'AU', 'US', 'EU'],
     address: {
       '@type': 'PostalAddress',
@@ -131,7 +132,7 @@ export default function RootLayout({
       '@type': 'ContactPoint',
       contactType: 'Sales',
       telephone: '+6283197188148',
-      email: 'olivia@noanaturalstone.com',
+      email: 'noaanaturalstone@gmail.com',
     },
     sameAs: [
       'https://www.facebook.com/noanaturalstone',
@@ -153,10 +154,13 @@ export default function RootLayout({
         <link rel="sitemap" href="/sitemap.xml" />
       </head>
       <body className="font-sans antialiased">
+        <Navigation />
         <FAQSchema />
-        <PageTransition>
-          {children}
-        </PageTransition>
+        <main className="pt-20">
+          <PageTransition>
+            {children}
+          </PageTransition>
+        </main>
         {process.env.NODE_ENV === 'production' && <Analytics />}
       </body>
     </html>

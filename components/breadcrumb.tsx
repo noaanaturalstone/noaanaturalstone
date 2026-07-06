@@ -55,7 +55,7 @@ export function Breadcrumb() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
       />
       <nav
-        className="bg-muted/30 py-3 px-4 sm:px-6 lg:px-8 mt-20"
+        className="bg-muted/30 py-3 px-4 sm:px-6 lg:px-8"
         aria-label="Breadcrumb"
       >
         <div className="max-w-6xl mx-auto">

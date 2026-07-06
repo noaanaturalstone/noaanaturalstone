@@ -8,7 +8,7 @@ export function Hero() {
       <div className="absolute inset-0 z-0">
         <img
           src="/images/stone_collection_1.jpeg"
-          alt="Premium Indonesian natural stone background"
+          // alt="Premium Indonesian natural stone background"
           className="w-full h-full object-cover opacity-15"
           loading="lazy"
         />

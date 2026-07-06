@@ -234,7 +234,7 @@ Track these metrics to measure SEO success:
 - README.md - Project setup instructions
 
 ### Contact for SEO:
-- Email: olivia@noanaturalstone.com
+- Email: noaanaturalstone@gmail.com
 - Phone: +62 878-6671-4970
 - Location: Malang, East Java, Indonesia
 
